@@ -1,0 +1,8 @@
+CREATE SCHEMA `monitor` ;
+CREATE TABLE `monitor`.`new_table` (
+  `datetime` DATETIME NOT NULL,
+  `sobitie` VARCHAR(45) NULL,
+  `namefile` LONGTEXT NULL,
+  `sizefile` DOUBLE NULL,
+  PRIMARY KEY (`datetime`));
+вапывапавп

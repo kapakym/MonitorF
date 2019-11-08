@@ -1,0 +1,94 @@
+object Form4: TForm4
+  Left = 414
+  Height = 680
+  Top = 18
+  Width = 604
+  Caption = 'Отчет'
+  ClientHeight = 680
+  ClientWidth = 604
+  Position = poMainFormCenter
+  LCLVersion = '2.0.2.0'
+  object Button2: TButton
+    Left = 240
+    Height = 25
+    Top = 640
+    Width = 136
+    Caption = 'Сформировать отчет'
+    OnClick = Button2Click
+    TabOrder = 0
+  end
+  object StringGrid1: TStringGrid
+    Left = 0
+    Height = 440
+    Top = 0
+    Width = 604
+    Align = alTop
+    AlternateColor = clForm
+    AutoEdit = False
+    BorderSpacing.CellAlignHorizontal = ccaLeftTop
+    BorderSpacing.CellAlignVertical = ccaCenter
+    Color = clHighlightText
+    ColCount = 2
+    ColumnClickSorts = True
+    Columns = <    
+      item
+        Title.Alignment = taCenter
+        Title.Caption = 'Имя файла'
+        Width = 400
+      end    
+      item
+        Title.Caption = 'Количество обращений'
+        Width = 200
+      end>
+    DoubleBuffered = True
+    FixedCols = 0
+    GridLineWidth = 2
+    HeaderHotZones = []
+    HeaderPushZones = []
+    Options = [goFixedVertLine, goFixedHorzLine, goVertLine, goHorzLine, goColSizing, goRowMoving, goEditing, goFixedRowNumbering, goHeaderHotTracking, goFixedColSizing, goRowHighlight]
+    ParentDoubleBuffered = False
+    ParentFont = False
+    RowCount = 1
+    TabOrder = 1
+    ColWidths = (
+      400
+      200
+    )
+  end
+  object Chart1: TChart
+    Left = 0
+    Height = 200
+    Top = 440
+    Width = 604
+    AxisList = <    
+      item
+        Marks.LabelBrush.Style = bsClear
+        Minors = <>
+        Title.LabelFont.Orientation = 900
+        Title.LabelBrush.Style = bsClear
+      end    
+      item
+        Alignment = calBottom
+        Marks.LabelBrush.Style = bsClear
+        Minors = <>
+        Title.LabelBrush.Style = bsClear
+      end>
+    Foot.Brush.Color = clBtnFace
+    Foot.Font.Color = clBlue
+    Title.Brush.Color = clBtnFace
+    Title.Font.Color = clBlue
+    Title.Text.Strings = (
+      'TAChart'
+    )
+    object Chart1LineSeries1: TLineSeries
+    end
+  end
+  object SQLQuery1: TSQLQuery
+    FieldDefs = <>
+    Database = Form1.MySQL57Connection1
+    Transaction = Form1.SQLTransaction1
+    Params = <>
+    left = 240
+    top = 288
+  end
+end
